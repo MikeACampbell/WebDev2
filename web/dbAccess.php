@@ -31,10 +31,7 @@
   <body>
     <h3>Database Accesser</h3>
 	
-
-       <?php 
-	   
-	   	echo '<table class="table">
+	<table class="table">
     <thead>
         <tr>
             <th class="table">Teacher ID</th>
@@ -42,10 +39,9 @@
             <th class="table">College ID</th>
 			<th class="table">Department ID</th>
         </tr>
-    </thead>'
-	   
-	   
-	   
+    </thead>
+	
+       <?php 
 	   
 		$stmt = $db->prepare('SELECT * FROM teacher');
 		$stmt->execute();
