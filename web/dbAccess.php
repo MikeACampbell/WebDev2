@@ -29,33 +29,29 @@
   <body>
     <h3>Database Accesser</h3>
 	
+	<table>
+    <thead>
+        <tr>
+            <th>Teacher ID</th>
+            <th>Teacher Name</th>
+            <th>College ID</th>
+			<th>Department ID</th>
+        </tr>
+    </thead>
        <?php 
 	   
 	   
-        $stmt = $db->prepare('SELECT * FROM teacher');
+		$stmt = $db->prepare('SELECT * FROM teacher');
 		$stmt->execute();
-		echo '<table>'
-		echo '<tr>'
-		echo '<th>Teacher ID<th>'
-		echo '<th>Teacher Name<th>'
-		echo '<th>School ID<th>'
-		echo '<th>Department ID<th>'
-		echo '</tr>'
+
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
-	// The variable "row" now holds the complete record for that
-	// row, and we can access the different values based on their
-	// name
-	
 	echo '<tr>';
 	echo '<td>' . $row['id'] . '</td>' . '<td>' . $row['name'] . '</td>';
 	echo '<td>' . $row['college_id'] . '</td>' . '<td>' . $row['department_id'] . '</td>';
 	echo '</tr>';
 }
-
-echo '</table>'
-	   
-	   ?>
-
+  ?>
+</table>
   </body>
 </html>
