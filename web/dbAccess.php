@@ -46,7 +46,7 @@
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach($rows as $scrip)
         {
-          print '"' . $scrip['content'] . '"';
+          print '"' . $scrip['name'] . '"';
         }
       }
       else{
