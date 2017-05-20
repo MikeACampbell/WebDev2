@@ -49,8 +49,8 @@
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	echo '<tr>';
-	echo '<td class="table">' . $row['id'] . '</td>' . '<td class="table">' . $row['name'] . '</td>';
-	echo '<td class="table">' . $row['college_id'] . '</td>' . '<td class="table">' . $row['department_id'] . '</td>';
+	echo '<td class="tableNum">' . $row['id'] . '</td>' . '<td class="table">' . $row['name'] . '</td>';
+	echo '<td class="tableNum">' . $row['college_id'] . '</td>' . '<td class="tableNum">' . $row['department_id'] . '</td>';
 	echo '</tr>';
 }
   ?>
