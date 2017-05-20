@@ -48,12 +48,12 @@
 	// name
 	
 	echo '<tr>';
-	echo '<td>' . $row['id'] . '</td><td>' . $row['name'] . '</td>';
-	echo '<td>' . $row['college_id'] . '</td><td>' . $row['department_id'] . '</td>';
+	echo '<td>' . $row['id'] . '</td>' . '<td>' . $row['name'] . '</td>';
+	echo '<td>' . $row['college_id'] . '</td>' . '<td>' . $row['department_id'] . '</td>';
 	echo '</tr>';
 }
 
-		echo '</table>'
+echo '</table>'
 	   
 	   ?>
 
