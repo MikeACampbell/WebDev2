@@ -29,7 +29,10 @@
     <title>Database Access</title>
   </head> 
   <body>
-    <h3>Database Accesser</h3>
+    <h2>Database Access</h2>
+	<hr></hr>
+	
+	<h3>Teacher</h3>
 	
 	<table class="table">
     <thead>
@@ -51,6 +54,59 @@
 	echo '<tr>';
 	echo '<td class="tableNum">' . $row['id'] . '</td>' . '<td class="table">' . $row['name'] . '</td>';
 	echo '<td class="tableNum">' . $row['college_id'] . '</td>' . '<td class="tableNum">' . $row['department_id'] . '</td>';
+	echo '</tr>';
+}
+  ?>
+</table>
+
+<hr></hr>
+
+<h3>College</h3>
+	<table class="table">
+    <thead>
+        <tr>
+            <th class="table">College ID</th>
+            <th class="table">College Name</th>
+            <th class="table">College Address</th>
+			<th class="table">College State</th>
+			<th class="table">College Zipcode</th>
+        </tr>
+    </thead>
+	
+       <?php 
+	   
+		$stmt = $db->prepare('SELECT * FROM college');
+		$stmt->execute();
+
+      while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+{
+	echo '<tr>';
+	echo '<td class="tableNum">' . $row['id'] . '</td>' . '<td class="table">' . $row['name'] . '</td>';
+	echo '<td class="tableNum">' . $row['address_street'] . '</td>' . '<td class="tableNum">' . $row['address_state'] . '</td>' . '<td class="tableNum">' . $row['address_zipcode'] . '</td>';
+	echo '</tr>';
+}
+  ?>
+</table>
+
+<hr></hr>
+<h3>Department</h3>
+	<table class="table">
+    <thead>
+        <tr>
+            <th class="table">Department ID</th>
+            <th class="table">Department Name</th>
+        </tr>
+    </thead>
+	
+       <?php 
+	   
+		$stmt = $db->prepare('SELECT * FROM department');
+		$stmt->execute();
+
+      while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+{
+	echo '<tr>';
+	echo '<td class="tableNum">' . $row['id'] . '</td>' . '<td class="table">' . $row['name'] . '</td>';
 	echo '</tr>';
 }
   ?>
