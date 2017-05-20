@@ -1,11 +1,10 @@
 <?php
-/*
-  error_reporting(E_ALL);
-  ini_set('display_errors', 1);
+
     $dbUrl = getenv('DATABASE_URL');
   if (empty($dbUrl)) {
-    $dbUrl = "postgres://mikecampbella@gmail.com:victus_6373@localhost:5432/Scriptures";
+    $dbUrl = "postgres://postgres:admin@localhost:5432/";
   }
+  /*
   $dbopts = parse_url($dbUrl);
   //print "<p>$dbUrl</p>\n\n";
   $dbHost = $dbopts["host"];
@@ -26,7 +25,7 @@
   {
     print "<p>$row[0]</p>\n\n";
   }
-  */
+ */
 ?>
 
 <!doctype html>
