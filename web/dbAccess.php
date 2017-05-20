@@ -31,11 +31,35 @@
 <!doctype html>
 <html>
   <head>
-    <title>Team05</title>
+    <title>Database Access</title>
   </head> 
   <body>
-    <h3>Scripture Resources</h3>
+    <h3>Database Access</h3>
+	
+       <?php
     
+      if(isset($_GET['id']))
+      {
+        $stmt = $db->prepare('SELECT * FROM teacher WHERE ID=:id');
+        $stmt->bindValue(':id', $_GET['id'], PDO::PARAM_STR);
+        $stmt->execute();
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach($rows as $scrip)
+        {
+          print '"' . $scrip['content'] . '"';
+        }
+      }
+      else{
+        $stmt = $db->prepare('SELECT * FROM teacher');
+        $stmt->execute();
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach($rows as $scrip)
+        {
+          echo '<b>' . $scrip['name'] . ' ' . $scrip['college_id'] . ' ' . $scrip['department_id'] '</b>';
+        }
+      }
+    
+    ?>
 
   </body>
 </html>
