@@ -4,10 +4,9 @@
   if (empty($dbUrl)) {
     $dbUrl = "postgres://postgres:admin@localhost:5432/";
   }
-  /*
   $dbopts = parse_url($dbUrl);
-  //print "<p>$dbUrl</p>\n\n";
-  $dbHost = $dbopts["host"];
+  print "<p>$dbUrl</p>\n\n";
+  /*$dbHost = $dbopts["host"];
   $dbPort = $dbopts["port"];
   $dbUser = $dbopts["user"];
   $dbPassword = $dbopts["pass"];
