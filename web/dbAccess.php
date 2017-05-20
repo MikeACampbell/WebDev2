@@ -24,12 +24,14 @@
 <!doctype html>
 <html>
   <head>
+  <link rel="stylesheet" href="mystyle.css">
+   <meta charset = "utf-8" />
     <title>Database Access</title>
   </head> 
   <body>
     <h3>Database Accesser</h3>
 	
-	<table style="width:100%">
+	<table class="table">
     <thead>
         <tr>
             <th>Teacher ID</th>
