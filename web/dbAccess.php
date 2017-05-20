@@ -34,10 +34,10 @@
 	<table class="table">
     <thead>
         <tr>
-            <th>Teacher ID</th>
-            <th>Teacher Name</th>
-            <th>College ID</th>
-			<th>Department ID</th>
+            <th class="table">Teacher ID</th>
+            <th class="table">Teacher Name</th>
+            <th class="table">College ID</th>
+			<th class="table">Department ID</th>
         </tr>
     </thead>
        <?php 
@@ -49,8 +49,8 @@
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	echo '<tr>';
-	echo '<td>' . $row['id'] . '</td>' . '<td>' . $row['name'] . '</td>';
-	echo '<td>' . $row['college_id'] . '</td>' . '<td>' . $row['department_id'] . '</td>';
+	echo '<td class="table">' . $row['id'] . '</td>' . '<td class="table">' . $row['name'] . '</td>';
+	echo '<td class="table">' . $row['college_id'] . '</td>' . '<td class="table">' . $row['department_id'] . '</td>';
 	echo '</tr>';
 }
   ?>
