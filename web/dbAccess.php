@@ -29,7 +29,7 @@
   <body>
     <h3>Database Accesser</h3>
 	
-	<table>
+	<table style="width:100%">
     <thead>
         <tr>
             <th>Teacher ID</th>
