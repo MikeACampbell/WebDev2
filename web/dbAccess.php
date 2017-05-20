@@ -1,4 +1,5 @@
 <?php
+/*
   error_reporting(E_ALL);
   ini_set('display_errors', 1);
     $dbUrl = getenv('DATABASE_URL');
@@ -20,7 +21,7 @@
     print "<p>error: $ex->getMessage() </p>\n\n";
     die();
   }
-/*
+
   foreach ($db->query('SELECT now()') as $row)
   {
     print "<p>$row[0]</p>\n\n";
