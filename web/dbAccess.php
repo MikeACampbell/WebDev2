@@ -40,6 +40,7 @@
 		echo '<th>Teacher Name<th>'
 		echo '<th>School ID<th>'
 		echo '<th>Department ID<th>'
+		echo '</tr>'
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	// The variable "row" now holds the complete record for that
