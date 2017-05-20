@@ -18,11 +18,6 @@
     print "<p>error: $ex->getMessage() </p>\n\n";
     die();
   }
-
- foreach ($db->query('SELECT now()') as $row)
-  {
-    print "<p>$row[0]</p>\n\n";
-  }
  
 ?>
 
@@ -35,6 +30,22 @@
     <h3>Database Accesser</h3>
 	
        <?php 
+	   
+	   
+        $stmt = $db->prepare('SELECT * FROM teacher');
+		$stmt->execute();
+      while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+{
+	// The variable "row" now holds the complete record for that
+	// row, and we can access the different values based on their
+	// name
+	echo '<p>';
+	echo $row['id'] . ' ' . $row['name'] . ' ';
+	echo $row['college_id'] . ' ' . $row['department_id'];
+	echo '</p>';
+}
+
+	   
 	   ?>
 
   </body>
