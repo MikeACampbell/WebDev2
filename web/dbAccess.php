@@ -33,7 +33,7 @@
     <title>Database Access</title>
   </head> 
   <body>
-    <h3>Database Access</h3>
+    <h3>Database Accesser</h3>
 	
        <?php 
 	   ?>
