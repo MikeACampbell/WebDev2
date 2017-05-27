@@ -1,5 +1,5 @@
 <?php
- 
+ /*
    $dbUrl = getenv('DATABASE_URL');
 
   $dbopts = parse_url($dbUrl);
@@ -38,6 +38,7 @@
       }else {
          echo "Your Login Name or Password is invalid";
       }
+	  */
 ?>
 
 <!doctype html>
