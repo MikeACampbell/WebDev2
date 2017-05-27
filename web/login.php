@@ -24,7 +24,7 @@
       $myusername = $_POST['username'];
       $mypassword = $_POST['password']; 
  
-      $stmt = prepare('SELECT id FROM userList WHERE username = '$myusername' and pword = '$mypassword'');
+      $stmt = prepare("SELECT id FROM userList WHERE username = '$myusername' and pword = '$mypassword'");
       $stmt->execute();
 	  /*
 	  $row = $stmt->fetch(PDO::FETCH_ASSOC)
