@@ -26,7 +26,7 @@
  
       $stmt = prepare('SELECT id FROM userList WHERE username = '$myusername' and pword = '$mypassword'');
       $stmt->execute();
-	  
+	  /*
 	  $row = $stmt->fetch(PDO::FETCH_ASSOC)
 
 	  $count = pg_num_rows($row);
