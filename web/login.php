@@ -25,10 +25,11 @@
       $mypassword = $_POST['password']; 
  
       $stmt = prepare('SELECT id FROM userList WHERE username = '$myusername' and pword = '$mypassword'');
-      $result = $stmt->execute();
-	  /*
-	  $row = pg_fetch_array($result, 0, PGSQL_NUM);
-	  $count = pg_num_rows($result);
+      $stmt->execute();
+	  
+	  $row = $stmt->fetch(PDO::FETCH_ASSOC)
+
+	  $count = pg_num_rows($row);
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
