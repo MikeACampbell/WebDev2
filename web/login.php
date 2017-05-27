@@ -23,10 +23,10 @@
       
       $myusername = $_POST['username'];
       $mypassword = $_POST['password']; 
- /*     
+ 
       $stmt = prepare('SELECT id FROM userList WHERE username = '$myusername' and pword = '$mypassword'');
       $result = $stmt->execute();
-	  
+	  /*
 	  $row = pg_fetch_array($result, 0, PGSQL_NUM);
 	  $count = pg_num_rows($result);
       
