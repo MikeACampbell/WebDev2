@@ -1,6 +1,5 @@
 <?php
    include("config.php");
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
       $myusername = $_POST['username'];
@@ -20,7 +19,6 @@
       }else {
          echo "Your Login Name or Password is invalid";
       }
-   }
 ?>
 
 <!doctype html>
